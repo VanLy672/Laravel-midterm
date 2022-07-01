@@ -21,6 +21,9 @@
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Name</label>
                 <input type="text" name="name" class="form-control" id="formGroupExampleInput">
+                @error('name')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Description</label>
@@ -61,7 +64,7 @@
             <button type="submit" class="btn btn-primary">Thêm</button>
         </form>
         <br>
-        <button class="btn btn-secondary"><a style="color:white; text-decoration: none" href="{{ route('food.index') }}"> Back</a></button>
+        <button class="btn btn-secondary"><a style="color:white; text-decoration: none" href="{{ route('food.index') }}">Trang Chủ</a></button>
     </div>
 </body>
 

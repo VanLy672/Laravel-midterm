@@ -46,13 +46,14 @@ class FoodController extends Controller
             'categories_id' => 'required',
             'image' => 'required|mimes:jpg,png,gif,jpeg|max: 2048',
         ], [
+            'name.required' => 'Please input name',
             'description.required' => 'Please input description',
-            'price.required' => 'Please input discountPrice',
-            'old_price.required' => 'Please input price',
+            'price.required' => 'Please input price',
+            'old_price.required' => 'Please input old price',
             'price.numeric' => 'Please input number',
             'old_price.numeric' => 'Please input number',
             'categories_id.required' => 'Please select category',
-            'price.required' => 'Please input discountPrice',
+            'price.required' => 'Please input old price',
             'image.required' => 'Please input image',
             'image.mimes' => 'Please input file image',
             'image.max' => 'Please choose image file has 2Mb'
