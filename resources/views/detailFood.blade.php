@@ -18,7 +18,7 @@
             <p class="fs-1 fw-bolder">Chi tiết sản phẩm "{{$food->name}}"</p>
             <div class="row justify-content-center">
                 <div class="col-6">
-                    <img class="img-fluid" src="/{{$food->image}}" alt="">
+                    <img class="img-fluid" src="/images/{{$food->image}}" alt="">
                 </div>
                 <div class="col-6">
                     <p class="fs-2 fw-bolder "> {{$food->name}}</p>

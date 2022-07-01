@@ -17,6 +17,7 @@
         <h1>CREATE NEW FOOD</h1>
         <form method="POST" action="{{route('food.store')}}" enctype="multipart/form-data">
             @csrf
+
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Name</label>
                 <input type="text" name="name" class="form-control" id="formGroupExampleInput">
@@ -24,28 +25,43 @@
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Description</label>
                 <input type="text" name="description" class="form-control" id="formGroupExampleInput">
+                @error('description')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Price</label>
                 <input type="text" name="price" class="form-control" id="formGroupExampleInput">
+                @error('price')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Old Price</label>
                 <input type="text" name="old_price" class="form-control" id="formGroupExampleInput">
+                @error('old_price')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Category</label>
                 <input type="number" name="categories_id" class="form-control" id="formGroupExampleInput">
+                @error('categories_id')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Image</label>
                 <input type="file" name="image" class="form-control" id="formGroupExampleInput">
+                @error('image')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div></div>
             <button type="submit" class="btn btn-primary">Thêm</button>
         </form>
         <br>
-        <button class="btn btn-danger"><a href="{{ route('food.index') }}"> Back</a></button>
+        <button class="btn btn-secondary"><a style="color:white; text-decoration: none" href="{{ route('food.index') }}"> Back</a></button>
     </div>
 </body>
 

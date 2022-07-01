@@ -20,9 +20,9 @@
   <h1>DANH SÁCH TẤT CẢ CÁC SẢN PHẨM</h1>
   @csrf
   @foreach ($food as $food)
-    <div class="col">
+    <div class="col-3">
         <div class="card" style="width: 18rem;">
-            <img src="/{{$food->image}}" class="card-img-top" alt="...">
+            <img src="/images/{{$food->image}}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{$food->name}}</h5>
                 <p class="card-text text-truncate">{{$food->description}}</p>
